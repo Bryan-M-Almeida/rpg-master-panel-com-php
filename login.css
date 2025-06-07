@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=MedievalSharp&display=swap');
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    /* Color palette inspired by medieval manuscripts */
+    --color-bg: #1b1210;
+    --color-gold: #d4af37;
+    --color-text-light: #f1e3cb;
+    --color-text-muted: #a0885f;
+    --color-border: rgba(212, 175, 55, 0.5);
+    --color-accent: #8b0000;
+    --shadow-glass: 0 8px 32px 0 rgba(212, 175, 55, 0.25);
+    --radius: 1rem;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: var(--color-bg);
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background texture by subtle noise/linen effect using CSS */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.login-container {
+    max-width: 420px;
+    margin: 3rem auto 4rem;
+    background: var(--color-card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-glass);
+    backdrop-filter: blur(8px) saturate(180%);
+    border: 1px solid var(--color-border);
+    padding: 2.5rem 3rem 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+h1 {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 700;
+    font-size: 2.75rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--color-gold);
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.8);
+    text-align: center;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-gold);
+    margin-bottom: 0.25rem;
+    display: inline-block;
+    user-select: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--color-border);
+    background: rgba(40, 25, 15, 0.8);
+    color: var(--color-text-light);
+    transition: border-color var(--transition), box-shadow var(--transition);
+    font-family: 'Inter', sans-serif;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: var(--color-text-muted);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 8px var(--color-gold);
+    background: rgba(50, 30, 10, 0.9);
+}
+
+button {
+    cursor: pointer;
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 700;
+    font-size: 1.15rem;
+    border-radius: 0.75rem;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    transition: background-color var(--transition), transform var(--transition);
+    user-select: none;
+    display: block;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.5);
+    background: var(--color-accent);
+    color: var(--color-gold);
+    text-shadow: 0 0 5px #4b0000;
+    border: 1.5px solid var(--color-gold);
+}
+
+button:hover,
+button:focus {
+    background: var(--color-gold);
+    color: var(--color-accent);
+    transform: scale(1.03);
+    box-shadow: 0 6px 2px rgba(0, 0, 0, 0.9);
+    outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+
+
+@media (max-width: 480px) {
+    .container {
+        margin: 2rem 1rem 3rem;
+        padding: 2rem 2rem 2.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

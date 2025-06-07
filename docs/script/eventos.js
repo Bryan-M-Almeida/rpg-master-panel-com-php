@@ -1,0 +1,170 @@
+const eventosData = {
+    "eventos": [
+        {
+            "titulo": "Eclipse Carmesim",
+            "local": "Vale das Almas",
+            "descricao": "Durante o eclipse, criaturas do submundo invadem a superfície. Apenas os bravos enfrentam a noite eterna."
+        },
+        {
+            "titulo": "Festival da Espada",
+            "local": "Cidade de Mydranor",
+            "descricao": "Campeões de todo o continente duelam por glória, ouro e o título de Guardião da Lâmina."
+        },
+        {
+            "titulo": "Tempestade de Mana",
+            "local": "Montanhas de Alaris",
+            "descricao": "Magos tentam conter uma energia caótica que ameaça explodir em magia selvagem."
+        },
+        {
+            "titulo": "Chuva de Fogo",
+            "local": "Planícies de Tharim",
+            "descricao": "Fragmentos flamejantes de um cometa caem do céu, incendiando tudo e trazendo criaturas flamejantes."
+        },
+        {
+            "titulo": "A Queda do Cometa Azul",
+            "local": "Lago Serafim",
+            "descricao": "Um cometa mágico colide com o lago, revelando ruínas antigas e despertando horrores submersos."
+        },
+        {
+            "titulo": "A Noite dos Mil Sussurros",
+            "local": "Floresta de Murmúrios",
+            "descricao": "Durante uma noite por década, árvores sussurram segredos de eras antigas, mas ouvir demais pode enlouquecer."
+        },
+        {
+            "titulo": "Despertar do Colosso",
+            "local": "Monte Kharan",
+            "descricao": "Um gigante de pedra adormecido há milênios desperta, pisoteando vilarejos em sua fúria cega."
+        },
+        {
+            "titulo": "Ritual dos Ossos",
+            "local": "Cripta de Velhakar",
+            "descricao": "Necromantes realizam um ritual profano para trazer de volta um antigo rei lich."
+        },
+        {
+            "titulo": "Caça Real",
+            "local": "Floresta Negra",
+            "descricao": "A realeza convoca aventureiros para caçar uma besta lendária que ameaça o reino."
+        },
+        {
+            "titulo": "Náufragos do Vazio",
+            "local": "Costas de Mirendal",
+            "descricao": "Um navio vindo de uma dimensão paralela aparece na costa, trazendo tecnologia e monstros desconhecidos."
+        },
+        {
+            "titulo": "Cerco à Fortaleza dos Ventos",
+            "local": "Picos Uivantes",
+            "descricao": "Uma fortaleza nas alturas é atacada por uma aliança de tribos orcs voadoras."
+        },
+        {
+            "titulo": "O Julgamento dos Dragões",
+            "local": "Vale Dracônico",
+            "descricao": "Dragões antigos reúnem-se para decidir o destino da humanidade após séculos de trégua."
+        },
+        {
+            "titulo": "Marcha dos Mortos",
+            "local": "Campos de Sálkar",
+            "descricao": "Um exército de esqueletos avança noite após noite, sem parar, vindo do norte gelado."
+        },
+        {
+            "titulo": "Praga do Sono Eterno",
+            "local": "Cidade de Varyan",
+            "descricao": "Toda a cidade adormece por semanas sem explicação. Os que acordam, voltam... diferentes."
+        },
+        {
+            "titulo": "O Leilão Proibido",
+            "local": "Mercado Sombrio",
+            "descricao": "Artefatos perigosos e proibidos são vendidos para quem pagar mais — ou matar mais."
+        },
+        {
+            "titulo": "Despertar do Deus Antigo",
+            "local": "Ilha Proibida de Ekkar",
+            "descricao": "Rituais insanos trazem à tona uma entidade que deveria permanecer esquecida."
+        },
+        {
+            "titulo": "O Convite dos Corvos",
+            "local": "Cemitério de Endrel",
+            "descricao": "Corvos entregam cartas negras. Os convidados são levados a um banquete sombrio em outra realidade."
+        },
+        {
+            "titulo": "Torre Invertida",
+            "local": "Deserto de Lan'Kar",
+            "descricao": "Uma torre surge de cabeça para baixo, cheia de armadilhas, segredos e portais temporais."
+        },
+        {
+            "titulo": "Aurora Carmesim",
+            "local": "Céus de Lysara",
+            "descricao": "Uma aurora vermelha cobre os céus, encantando os fracos de mente e abrindo portais."
+        },
+        {
+            "titulo": "Eco do Apocalipse",
+            "local": "Ruínas de Kandar",
+            "descricao": "Ecos de um futuro destruído surgem em forma de visões e viajantes temporais tentando impedir o fim."
+        },
+        {
+            "titulo": "Chamas do Traidor",
+            "local": "Templo de Solarian",
+            "descricao": "Um sacerdote de alto escalão trai sua ordem e invoca um elemental de fogo incontrolável."
+        },
+        {
+            "titulo": "Navio Fantasma",
+            "local": "Mar de Elaris",
+            "descricao": "Um navio coberto por neblina aparece toda lua cheia, trazendo fantasmas sedentos por vingança."
+        },
+        {
+            "titulo": "Encontro das Três Luas",
+            "local": "Planícies de Irmaria",
+            "descricao": "Um raro alinhamento lunar causa mutações em feras e desperta poderes ocultos em humanos."
+        },
+        {
+            "titulo": "Revolta dos Anões",
+            "local": "Minas de Grolm",
+            "descricao": "Os anões se rebelam contra os humanos após décadas de exploração e guerras comerciais."
+        },
+        {
+            "titulo": "Chave para o Submundo",
+            "local": "Pedra de Var'Nol",
+            "descricao": "Uma chave mística aparece e pode abrir os portões para o reino dos mortos... ou fechá-los."
+        },
+        {
+            "titulo": "A Névoa Infinita",
+            "local": "Bosque Cinzento",
+            "descricao": "Uma névoa mágica encobre a floresta, impedindo qualquer um de sair — ou de lembrar quem é."
+        },
+        {
+            "titulo": "Feira de Bruxas",
+            "local": "Colina das Almas",
+            "descricao": "Uma feira mágica itinerante aparece por uma noite só. Quem entra pode nunca mais sair."
+        },
+        {
+            "titulo": "Guardiã do Tempo",
+            "local": "Torre do Relógio Antigo",
+            "descricao": "O tempo começa a falhar e saltar. Uma guardiã surge pedindo ajuda para consertar a linha temporal."
+        },
+        {
+            "titulo": "A Voz do Poço",
+            "local": "Vilarejo de Dorn",
+            "descricao": "Algo antigo fala através do poço da aldeia, prometendo poder em troca de sacrifícios."
+        },
+        {
+            "titulo": "Expurgo dos Magos",
+            "local": "Academia de Arkhor",
+            "descricao": "A magia é banida por um rei paranoico. Caçadores de magos passam a executar qualquer usuário arcano."
+        }
+    ]
+}
+
+fetch('../data/eventos.json')
+    .then(res => res.json())
+    .catch(() => eventosData)
+    .then(data => {
+        const container = document.getElementById("eventos-list");
+        data.eventos.forEach(evento => {
+            container.innerHTML += `
+                        <div class="evento-card">
+                            <h2>${evento.titulo}</h2>
+                            <p><strong>Local:</strong> ${evento.local}</p>
+                            <p>${evento.descricao}</p>
+                        </div>
+                    `;
+        });
+    });

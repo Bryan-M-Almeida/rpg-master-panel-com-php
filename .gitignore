@@ -1,0 +1,12 @@
+conexao.php
+.env
+*.sqlite
+*.log
+*.tmp
+node_modules/
+vendor/
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+.vscode/

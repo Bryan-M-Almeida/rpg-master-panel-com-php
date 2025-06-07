@@ -1,0 +1,97 @@
+body {
+    background: #3e2f1c url('../assets/textura-parchment.jpg') repeat;
+    color: #fce8c8;
+    font-family: 'Cinzel Decorative', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background: linear-gradient(#5b3a29, #3a2517);
+    border-bottom: 5px solid #d1b075;
+    box-shadow: 0 5px 15px #000;
+    position: relative;
+}
+
+.btn-voltar {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: #a87e45;
+    color: #fff5dc;
+    padding: 10px 15px;
+    border: 2px solid #e1c89b;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px #000;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+    background: #c79d63;
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 3em;
+    color: #fce5b3;
+    text-shadow: 3px 3px 6px #000;
+    margin: 10px 0 0 0;
+}
+
+#monstro-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding: 40px;
+    gap: 30px;
+}
+
+.monstro-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #4d3824;
+    border: 3px double #b5904d;
+    padding: 15px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.monstro-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px #d1b075;
+}
+
+.monstro-card h2 {
+    color: #fbd994;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 0;
+}
+
+.monstro-card img {
+    border-radius: 12px;
+    border: 2px solid #a87e45;
+    box-shadow: 0 0 10px #000;
+    height: 200px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.atributos {
+    margin-top: 0;
+    background: rgba(255, 248, 225, 0.05);
+    border-left: 4px solid #b5904d;
+    padding-left: 10px;
+    font-size: 1em;
+    line-height: 1.6;
+}

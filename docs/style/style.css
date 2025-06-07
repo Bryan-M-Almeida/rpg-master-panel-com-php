@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0d0d url('https://www.transparenttextures.com/patterns/dark-leather.png');
+    color: #f5f5dc;
+    font-family: 'Cinzel Decorative', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(to bottom, #3a2517, #5e3c25);
+    border-bottom: 3px solid #444;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ddb66b;
+    text-shadow: 2px 2px #000;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    color: #bbb;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.painel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.painel-card {
+    background: #1f1a12;
+    border: 2px solid #ddb66b;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.painel-card:hover {
+    background: #2b2214;
+    transform: scale(1.05);
+}
+
+.painel-card h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #f0c97d;
+}
+
+.painel-card p {
+    font-size: 0.95em;
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #3a2517, #472b18);
+    border-top: 2px solid #444;
+    font-size: 0.9em;
+    color: #888;
+}
+
+a{
+    text-decoration: none;
+    color: #888;
+}
+
+a p:hover{
+    scale: 1.1;
+}
+a p{
+    justify-self: center;
+    transition: 0.6s;
+}

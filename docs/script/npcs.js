@@ -1,0 +1,219 @@
+const container = document.querySelector("#npcs-list");
+const npcsData = {
+    "npcs": [
+        {
+            "nome": "Thorn, o Ferreiro",
+            "profissao": "Ferreiro",
+            "local": "Vila de Eldoria",
+            "personalidade": "Ranzinza mas justo",
+            "descricao": "Pode forjar armas lendárias se você trouxer os materiais certos."
+        },
+        {
+            "nome": "Myrna, a Curandeira",
+            "profissao": "Curandeira",
+            "local": "Templo da Lua",
+            "personalidade": "Gentil e sábia",
+            "descricao": "Ajuda aventureiros feridos e fornece poções raras."
+        },
+        {
+            "nome": "Alrik, o Mercador Misterioso",
+            "profissao": "Comerciante",
+            "local": "Mercado Sombrio",
+            "personalidade": "Enganador e carismático",
+            "descricao": "Vende itens mágicos duvidosos por preços altíssimos."
+        },
+        {
+            "nome": "Kael, o Exilado",
+            "profissao": "Espadachim",
+            "local": "Ruínas de Vharas",
+            "personalidade": "Silencioso e atormentado",
+            "descricao": "Um guerreiro lendário que vive isolado por ter matado seu próprio rei."
+        },
+        {
+            "nome": "Lady Elowen",
+            "profissao": "Nobre Feiticeira",
+            "local": "Castelo Dourado",
+            "personalidade": "Orgulhosa e manipuladora",
+            "descricao": "Movimenta os bastidores da política usando magia e charme."
+        },
+        {
+            "nome": "Fenn, o Bardo Errante",
+            "profissao": "Bardo",
+            "local": "Estalagem do Grifo Azul",
+            "personalidade": "Tagarela e encantador",
+            "descricao": "Conta histórias que se tornam reais — literalmente."
+        },
+        {
+            "nome": "Yrsa, a Caçadora de Almas",
+            "profissao": "Caçadora de Recompensas",
+            "local": "Floresta Negra",
+            "personalidade": "Fria e letal",
+            "descricao": "Captura monstros e pessoas amaldiçoadas em troca de artefatos antigos."
+        },
+        {
+            "nome": "Padre Callen",
+            "profissao": "Sacerdote",
+            "local": "Capela do Santuário Sagrado",
+            "personalidade": "Bondoso, mas perturbado",
+            "descricao": "Já presenciou um avatar demoníaco e tenta alertar os outros — sem sucesso."
+        },
+        {
+            "nome": "Dronir, o Enano das Profundezas",
+            "profissao": "Mineiro e Engenheiro",
+            "local": "Montanhas de Bragmar",
+            "personalidade": "Teimoso e brilhante",
+            "descricao": "Conhece túneis secretos que levam a tesouros proibidos."
+        },
+        {
+            "nome": "Zelra, a Oráculo Cega",
+            "profissao": "Vidente",
+            "local": "Caverna de Cristal",
+            "personalidade": "Enigmática e direta",
+            "descricao": "Vê o futuro, mas apenas se a pergunta for feita em forma de enigma."
+        },
+        {
+            "nome": "Tovin, o Rato de Biblioteca",
+            "profissao": "Bibliotecário Arcanista",
+            "local": "Grande Biblioteca de Anor",
+            "personalidade": "Nervoso e hiperinteligente",
+            "descricao": "Guarda grimórios proibidos que tentam escapar das prateleiras."
+        },
+        {
+            "nome": "Gara, a Gladiadora Redimida",
+            "profissao": "Treinadora de Combate",
+            "local": "Arenas de Tyrak",
+            "personalidade": "Feroz mas honrada",
+            "descricao": "Ajuda jovens guerreiros a encontrar um propósito além da violência."
+        },
+        {
+            "nome": "Varnak, o Necromante Gentil",
+            "profissao": "Necromante",
+            "local": "Torre de Ossos",
+            "personalidade": "Educado e solitário",
+            "descricao": "Tenta usar necromancia para reviver apenas animais de estimação."
+        },
+        {
+            "nome": "Elias, o Cozinheiro de Reis",
+            "profissao": "Chef Real",
+            "local": "Palácio de Verúnia",
+            "personalidade": "Perfeccionista e vaidoso",
+            "descricao": "Suas refeições dão bônus mágicos por tempo limitado."
+        },
+        {
+            "nome": "Nia, a Espiã Disfarçada",
+            "profissao": "Camponesa (fingida)",
+            "local": "Aldeia de Windell",
+            "personalidade": "Observadora e sarcástica",
+            "descricao": "Na verdade trabalha para uma guilda secreta e coleta informações sobre o grupo."
+        },
+        {
+            "nome": "Krag, o Ogro Poeta",
+            "profissao": "Poeta e Pintor",
+            "local": "Caverna da Neblina",
+            "personalidade": "Sensível e ingênuo",
+            "descricao": "Escreve poemas sobre o luar e pinta com sangue de monstros."
+        },
+        {
+            "nome": "Seraphine, a Anja Caída",
+            "profissao": "Viajante",
+            "local": "Ruínas Celestiais",
+            "personalidade": "Triste e curiosa",
+            "descricao": "Busca entender a humanidade após ser exilada dos céus por amar um mortal."
+        },
+        {
+            "nome": "Rurik, o Capitão Pirata",
+            "profissao": "Corsário",
+            "local": "Porto de Saltrun",
+            "personalidade": "Bravateiro e leal",
+            "descricao": "Comanda um navio voador e tem mapas que levam a ilhas esquecidas."
+        },
+        {
+            "nome": "Miriel, a Tecelã de Sonhos",
+            "profissao": "Artesã de Magia",
+            "local": "Câmara Onírica",
+            "personalidade": "Misteriosa e maternal",
+            "descricao": "Cria mantos e talismãs a partir dos sonhos dos visitantes."
+        },
+        {
+            "nome": "Jorek, o Grisalho",
+            "profissao": "Veterano de Guerra",
+            "local": "Fortaleza de Aedren",
+            "personalidade": "Direto e estratégico",
+            "descricao": "Treina tropas e pode ser um mentor para heróis inexperientes."
+        },
+        {
+            "nome": "Urotas, o rei do Infinito",
+            "profissao": "Feiticeiro Arcano",
+            "local": "Vazio da ordem infinita",
+            "personalidade": "Sarcástico e confiante",
+            "descricao": "Domina magias dimensionais com olhos que veem entre planos. Brinca com inimigos como se fossem insetos."
+        },
+        {
+            "nome": "Ryomenar, o Rei das Cicatrizes",
+            "profissao": "Feiticeiro das maldições",
+            "local": "Santuário do Abismo",
+            "personalidade": "Cruel e arrogante",
+            "descricao": "Habita o corpo de um jovem guerreiro e deseja reconstruir o mundo à sua imagem de caos e poder."
+        },
+        {
+            "nome": "Itan, o Lobo Silencioso",
+            "profissao": "Assassino Nômade",
+            "local": "Clã Sombrio de Karasu",
+            "personalidade": "Reservado e melancólico",
+            "descricao": "Traiu sua própria ordem para salvar seu irmão e agora vaga como uma sombra do passado."
+        },
+        {
+            "nome": "Zoryu, o Espadachim de Um Olho",
+            "profissao": "Caçador de Recompensas",
+            "local": "Costa das Mil Lâminas",
+            "personalidade": "Cabeça quente e fiel",
+            "descricao": "Carrega três espadas e luta por um antigo voto feito à sua capitã desaparecida."
+        },
+        {
+            "nome": "Grakts, o Espadão Negro",
+            "profissao": "Andarilho",
+            "local": "Terras Escarlates",
+            "personalidade": "Violento e amargurado",
+            "descricao": "Porta uma espada colossal e é perseguido por demônios após sobreviver a um ritual profano."
+        },
+        {
+            "nome": "Leovan, o Lâmina Rápida",
+            "profissao": "Capitão de Elite",
+            "local": "Muralha de Aegis",
+            "personalidade": "Frio, calculista e impecável",
+            "descricao": "Com movimentos perfeitos e lealdade inquestionável, lidera uma unidade que nunca falhou em missão."
+        },
+        {
+            "nome": "Makira, a Voz do Contrato",
+            "profissao": "Invocadora Demoníaca",
+            "local": "Palácio Vermelho",
+            "personalidade": "Serena e manipuladora",
+            "descricao": "Faz pactos com entidades proibidas usando charme e promessas falsas. Todos que a seguem acabam virando marionetes."
+        }
+    ]
+}
+
+
+fetch('../data/npcs.json')
+    .then(res => res.json())
+    .catch(() => npcsData)
+    .then(data => {
+        data.npcs.forEach(npc => {
+            const card = document.createElement("div");
+            card.className = "npc-card";
+
+            card.innerHTML = `
+                <h2>${npc.nome}</h2>
+                <p><strong>Profissão:</strong> ${npc.profissao}</p>
+                <p><strong>Descrição:</strong> ${npc.descricao}</p>
+                <p><strong>Local:</strong> ${npc.local}</p>
+                <p><strong>Personalidade:</strong> ${npc.personalidade}</p>
+            `;
+
+            container.appendChild(card);
+        });
+    })
+    .catch(err => {
+        container.innerHTML = "<p>Erro ao carregar os NPCs.</p>";
+        console.error("Erro no fetch de npcs.json:", err);
+    });
