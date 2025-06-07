@@ -3,7 +3,8 @@
 Um painel medieval para gerenciar personagens, NPCs, monstros e eventos de RPG — feito com PHP puro e muito sangue de dragão 🐉.
 
 ## 🔥 Funcionalidades
-
+- Geração de personagens
+- IA Ollama funcional
 - Login seguro com verificação de senha (PHP + `password_verify`)
 - Cadastro de novos usuários
 - Gerenciamento visual de:
@@ -25,18 +26,19 @@ Um painel medieval para gerenciar personagens, NPCs, monstros e eventos de RPG �
 ## 💾 Estrutura de pastas
 
 projeto/
+
 ├── index.php
+
 ├── rpg/
+
 │ └── docs/
+
 │ └── index.php
+
 │ └── logout.php
+
 │ └── data/
 
-
-## 🔒 Segurança
-
-- Nunca suba seu `conexao.php` com senha real no GitHub.
-- Use variáveis de ambiente ou um `.env` se possível.
 
 ## 🙋 Feito por
 
